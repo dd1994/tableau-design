@@ -1,0 +1,384 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>作图方式 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="data-model.html" />
+    
+    
+    <link rel="prev" href="basic-principle.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic-principle.html">
+            
+                <a href="basic-principle.html">
+            
+                    
+                    基本思想和原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="visulazition.html">
+            
+                <a href="visulazition.html">
+            
+                    
+                    作图方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="data-model.html">
+            
+                <a href="data-model.html">
+            
+                    
+                    数据模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="automatic-presentation.html">
+            
+                <a href="automatic-presentation.html">
+            
+                    
+                    图表自动推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="calculated-fields.html">
+            
+                <a href="calculated-fields.html">
+            
+                    
+                    计算字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="low-sql.html">
+            
+                <a href="low-sql.html">
+            
+                    
+                    减少手写 SQL 的功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >作图方式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F5C;&#x56FE;&#x65B9;&#x5F0F;">&#x4F5C;&#x56FE;&#x65B9;&#x5F0F;</h1>
+<p>&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x4E3B;&#x8981;&#x5206;&#x6790; Tableau &#x662F;&#x5982;&#x4F55;&#x4F5C;&#x56FE;&#x7684;&#x4EE5;&#x53CA;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FD9;&#x4E48;&#x8BBE;&#x8BA1;&#x3002;</p>
+<p>&#x53BB; <a href="https://public.tableau.com/en-us/gallery/?tab=viz-of-the-day&amp;type=viz-of-the-day" target="_blank">Tableau Gallery</a> &#x770B;&#x770B;, &#x591A;&#x7FFB;&#x51E0;&#x9875;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x89C2;&#x4F53;&#x4F1A;&#x5230; Tableau &#x76F8;&#x6BD4;&#x540C;&#x7C7B;&#x8F6F;&#x4EF6;&#x7684;&#x5F3A;&#x5927;&#xFF0C;&#x5B83;&#x80FD;&#x505A;&#x5230;&#x7684;&#x53EF;&#x89C6;&#x5316;&#x6548;&#x679C;&#x4EE4;&#x4EBA;&#x60CA;&#x53F9;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x505A;&#x51FA;&#x5F88;&#x591A;&#x56FE;&#x8868;&#x5E93;&#xFF08;&#x5982; G2 &#x548C; ggplot2&#xFF09;&#x90FD;&#x505A;&#x4E0D;&#x51FA;&#x6765;&#x7684;&#x56FE;&#x3002;</p>
+<h2 id="&#x56FE;&#x5F62;&#x8BED;&#x6CD5;">&#x56FE;&#x5F62;&#x8BED;&#x6CD5;</h2>
+<p>&#x9996;&#x5148;&#xFF0C;Tableau &#x4F5C;&#x56FE;&#x7684;&#x7406;&#x8BBA;&#x662F;&#x57FA;&#x4E8E;&#x56FE;&#x5F62;&#x8BED;&#x6CD5;&#x7684;&#xFF0C;&#x8FD9;&#x662F; Tableau &#x6700;&#x91CD;&#x8981;&#x7684;&#x57FA;&#x77F3;&#x4E4B;&#x4E00;&#x3002;<a href="https://book.douban.com/subject/10123863/" target="_blank">The Grammar of Graphics</a> &#x662F; Leland Wilkinson &#x5199;&#x5F97;&#x4E00;&#x672C;&#x4E66;&#x3002;&#x56FE;&#x5F62;&#x8BED;&#x6CD5;&#x662F;&#x56FE;&#x8868;&#x7684;&#x4E00;&#x79CD;&#x62BD;&#x8C61;&#x65B9;&#x5F0F;&#xFF0C;&#x5B83;&#x6709;&#x5F88;&#x591A;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<ul>
+<li>R&#x8BED;&#x8A00;&#x6700;&#x6D41;&#x884C;&#x7684;&#x7ED8;&#x56FE;&#x5305; <a href="https://ggplot2.tidyverse.org" target="_blank">ggplot2</a></li>
+<li><a href="https://antv.alipay.com/zh-cn/g2/3.x/index.html" target="_blank">G2</a>: &#x547D;&#x4EE4;&#x5F0F;&#x7F16;&#x7A0B;&#xFF0C;API &#x7C7B;&#x4F3C; ggplot2. </li>
+<li><a href="https://vega.github.io/vega-lite/" target="_blank">vega/vaga-lite</a>: JSON &#x914D;&#x7F6E;&#x751F;&#x6210;&#x56FE;&#x8868;&#xFF0C;Python, JS &#x7B49;&#x591A;&#x8BED;&#x8A00;&#x5B9E;&#x73B0;, <a href="https://vega.github.io/editor/#/examples/vega-lite/bar" target="_blank">vega-lite &#x7684;&#x67F1;&#x72B6;&#x56FE;&#x793A;&#x4F8B;</a></li>
+<li>...</li>
+</ul>
+<p>&#x5982;&#x679C;&#x4F60;&#x7528;&#x8FC7; G2 &#x6216;&#x8005; ggplot2 &#x4F5C;&#x56FE;&#xFF0C;&#x5C31;&#x5F88;&#x5BB9;&#x6613;&#x4E0A;&#x624B; Tableau&#xFF0C;&#x56E0;&#x4E3A;&#x5F88;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x56FE;&#x8868;&#x53EF;&#x4EE5;&#x7531;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A; Marks &#x7EC4;&#x6210;&#xFF0C;&#x4E5F;&#x80FD;&#x7406;&#x89E3;<a href="https://www.yuque.com/antv/g2-docs/tutorial-facet" target="_blank">&#x5206;&#x9762;(Facet)</a>&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x4F5C;&#x56FE;&#x65F6;&#xFF0C;&#x5DF2;&#x7ECF;&#x62E5;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x8981;&#x5F97;&#x5230;&#x56FE;&#x8868;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x8981;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x5C31;&#x662F;&#x5C06;&#x6570;&#x636E;&#x6620;&#x5C04;&#x5230;&#x56FE;&#x5F62;&#x7684;&#x5C5E;&#x6027;&#x4E0A;&#x3002;
+&#x56FE;&#x5F62;&#x7684;&#x5C5E;&#x6027;&#x5305;&#x62EC;&#x4F4D;&#x7F6E;&#xFF0C;&#x989C;&#x8272;&#xFF0C;&#x5927;&#x5C0F;&#xFF0C;&#x900F;&#x660E;&#x5EA6;&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x4EE5;&#x4E0B;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code class="lang-js">[{
+    <span class="hljs-string">&quot;Entity&quot;</span>: <span class="hljs-string">&quot;China&quot;</span>,
+    <span class="hljs-string">&quot;Year&quot;</span>: <span class="hljs-number">2000</span>,
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-string">&quot;CHN&quot;</span>,
+    <span class="hljs-string">&quot;GDP&quot;</span>: <span class="hljs-number">22370.806</span>
+}, {
+    <span class="hljs-string">&quot;Entity&quot;</span>: <span class="hljs-string">&quot;China&quot;</span>,
+    <span class="hljs-string">&quot;Year&quot;</span>: <span class="hljs-number">2001</span>,
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-string">&quot;CHN&quot;</span>,
+    <span class="hljs-string">&quot;GDP&quot;</span>: <span class="hljs-number">24236.511</span>
+}, {
+    <span class="hljs-string">&quot;Entity&quot;</span>: <span class="hljs-string">&quot;China&quot;</span>,
+    <span class="hljs-string">&quot;Year&quot;</span>: <span class="hljs-number">2002</span>,
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-string">&quot;CHN&quot;</span>,
+    <span class="hljs-string">&quot;GDP&quot;</span>: <span class="hljs-number">26449.461</span>
+},{
+    <span class="hljs-string">&quot;Entity&quot;</span>: <span class="hljs-string">&quot;Japan&quot;</span>,
+    <span class="hljs-string">&quot;Year&quot;</span>: <span class="hljs-number">2000</span>,
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-string">&quot;JPN&quot;</span>,
+    <span class="hljs-string">&quot;GDP&quot;</span>: <span class="hljs-number">53489.355</span>
+}, {
+    <span class="hljs-string">&quot;Entity&quot;</span>: <span class="hljs-string">&quot;Japan&quot;</span>,
+    <span class="hljs-string">&quot;Year&quot;</span>: <span class="hljs-number">2001</span>,
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-string">&quot;JPN&quot;</span>,
+    <span class="hljs-string">&quot;GDP&quot;</span>: <span class="hljs-number">53706.701</span>
+}, {
+    <span class="hljs-string">&quot;Entity&quot;</span>: <span class="hljs-string">&quot;Japan&quot;</span>,
+    <span class="hljs-string">&quot;Year&quot;</span>: <span class="hljs-number">2002</span>,
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-string">&quot;JPN&quot;</span>,
+    <span class="hljs-string">&quot;GDP&quot;</span>: <span class="hljs-number">53770.071</span>
+},{
+    <span class="hljs-string">&quot;Entity&quot;</span>: <span class="hljs-string">&quot;United States&quot;</span>,
+    <span class="hljs-string">&quot;Year&quot;</span>: <span class="hljs-number">2000</span>,
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-string">&quot;USA&quot;</span>,
+    <span class="hljs-string">&quot;GDP&quot;</span>: <span class="hljs-number">127130.582</span>
+}, {
+    <span class="hljs-string">&quot;Entity&quot;</span>: <span class="hljs-string">&quot;United States&quot;</span>,
+    <span class="hljs-string">&quot;Year&quot;</span>: <span class="hljs-number">2001</span>,
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-string">&quot;USA&quot;</span>,
+    <span class="hljs-string">&quot;GDP&quot;</span>: <span class="hljs-number">128371.354</span>
+}, {
+    <span class="hljs-string">&quot;Entity&quot;</span>: <span class="hljs-string">&quot;United States&quot;</span>,
+    <span class="hljs-string">&quot;Year&quot;</span>: <span class="hljs-number">2002</span>,
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-string">&quot;USA&quot;</span>,
+    <span class="hljs-string">&quot;GDP&quot;</span>: <span class="hljs-number">130664.23</span>
+}, 
+]
+</code></pre>
+<p>&#x8FD9;&#x662F;&#x4E2D;&#x7F8E;&#x65E5;&#x4E09;&#x56FD;&#x5404;&#x4E2A;&#x5E74;&#x4EFD;&#x7684;GDP &#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x505A;&#x51FA;&#x8FD9;&#x4E09;&#x4E2A;&#x56FD;&#x5BB6; GDP &#x968F;&#x65F6;&#x95F4;&#x53D8;&#x5316;&#x7684;&#x66F2;&#x7EBF;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><img src="https://si.geilicdn.com/img-25a90000016d7c0325df0a21924a-unadjust_554_497.png" alt="img"></p>
+<p>&#x5728;&#x56FE;&#x5F62;&#x8BED;&#x6CD5;&#x4E2D;&#x8BE5;&#x5982;&#x4F55;&#x505A;&#x5462;&#xFF1F;&#x5206;&#x4E09;&#x6B65;</p>
+<ol>
+<li>&#x5C06;&#x51E0;&#x4F55;&#x6807;&#x8BB0;&#x7C7B;&#x578B;&#x8BBE;&#x7F6E;&#x4E3A;&#x6298;&#x7EBF;(line)</li>
+<li>&#x5C06;&#x5B57;&#x6BB5; year &#x6620;&#x5C04;&#x5230; x &#x8F74;</li>
+<li>&#x5C06;&#x5B57;&#x6BB5; GDP &#x6620;&#x5C04;&#x5230; y &#x8F74;</li>
+</ol>
+<p>&#x7528; G2 &#x7684;&#x8BED;&#x6CD5;&#x8868;&#x8FBE;&#x5C31;&#x662F; <code>chart.line().position(&apos;year*GDP&apos;).color(&apos;Entity&apos;)</code>, 
+&#x800C;&#x7528; Tableau &#x8868;&#x8FBE;&#x5C31;&#x662F;:</p>
+<p><img src="https://si.geilicdn.com/img-5eeb0000016d7c094d610a219248-unadjust_1798_1176.png" alt="img"></p>
+<h2 id="&#x8D85;&#x8D8A;&#x56FE;&#x5F62;&#x8BED;&#x6CD5;">&#x8D85;&#x8D8A;&#x56FE;&#x5F62;&#x8BED;&#x6CD5;</h2>
+<p>&#x57FA;&#x4E8E;&#x56FE;&#x5F62;&#x8BED;&#x6CD5;&#x7684;&#x8BBE;&#x8BA1;&#x8BA9; Tableau &#x6709;&#x66F4;&#x5F3A;&#x7684;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x901A;&#x8FC7;&#x7EC4;&#x5408;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED8;&#x5236;&#x51FA;&#x65E0;&#x6570;&#x79CD;&#x56FE;&#x8868;&#x3002;&#x800C;&#x4E0D;&#x662F;&#x50CF; Excel &#x90A3;&#x6837;&#xFF0C;&#x4ECE;&#x51E0;&#x5341;&#x79CD;&#x56FE;&#x8868;&#x4E2D;&#x9009;&#x51FA;&#x4E00;&#x79CD;&#x3002;&#x5F88;&#x591A;&#x53EF;&#x89C6;&#x5316;&#x8F6F;&#x4EF6;&#xFF0C;&#x50CF; <a href="https://github.com/metabase/metabase" target="_blank">Metabase</a> &#x548C; <a href="https://github.com/apache/incubator-superset" target="_blank">Superset</a> &#x7684;&#x4F5C;&#x56FE;&#x65B9;&#x5F0F;&#x90FD;&#x662F;&#x7C7B;&#x4F3C; Excel &#x7684;&#x8BBE;&#x8BA1;&#xFF0C;&#x8FD9;&#x79CD;&#x8BBE;&#x8BA1;&#x867D;&#x7136;&#x770B;&#x4E0A;&#x53BB;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x4ECE;&#x6E90;&#x5934;&#x4E0A;&#x5C31;&#x6CA1;&#x6CD5;&#x8FBE;&#x5230;&#x66F4;&#x5F3A;&#x7684;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x5F88;&#x591A;&#x56FE;&#x6839;&#x672C;&#x505A;&#x4E0D;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x56FE;&#x5F62;&#x8BED;&#x6CD5;&#x5E76;&#x4E0D;&#x662F;&#x5B8C;&#x7F8E;&#x7684;&#xFF0C;&#x662F;&#x5426;&#x5B58;&#x5728;&#x66F4;&#x597D;&#x7684;&#x62BD;&#x8C61;&#x65B9;&#x5F0F;&#xFF1F;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="basic-principle.html" class="navigation navigation-prev " aria-label="Previous page: 基本思想和原则">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="data-model.html" class="navigation navigation-next " aria-label="Next page: 数据模型">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"作图方式","level":"1.3","depth":1,"next":{"title":"数据模型","level":"1.4","depth":1,"path":"source/data-model.md","ref":"source/data-model.md","articles":[]},"previous":{"title":"基本思想和原则","level":"1.2","depth":1,"path":"source/basic-principle.md","ref":"source/basic-principle.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"source/visulazition.md","mtime":"2019-10-08T08:17:31.702Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-08T08:18:49.519Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

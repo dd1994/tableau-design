@@ -1,0 +1,355 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据模型 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="automatic-presentation.html" />
+    
+    
+    <link rel="prev" href="visulazition.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic-principle.html">
+            
+                <a href="basic-principle.html">
+            
+                    
+                    基本思想和原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="visulazition.html">
+            
+                <a href="visulazition.html">
+            
+                    
+                    作图方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="data-model.html">
+            
+                <a href="data-model.html">
+            
+                    
+                    数据模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="automatic-presentation.html">
+            
+                <a href="automatic-presentation.html">
+            
+                    
+                    图表自动推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="calculated-fields.html">
+            
+                <a href="calculated-fields.html">
+            
+                    
+                    计算字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="low-sql.html">
+            
+                <a href="low-sql.html">
+            
+                    
+                    减少手写 SQL 的功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据模型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6570;&#x636E;&#x6A21;&#x578B;">&#x6570;&#x636E;&#x6A21;&#x578B;</h1>
+<p>&#x5F88;&#x591A;&#x53EF;&#x89C6;&#x5316;&#x8F6F;&#x4EF6;&#x53EA;&#x6709;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x5373;&#x533A;&#x5206;<code>string/number/date/time...</code>&#x7B49;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C; &#x8FD9;&#x5927;&#x591A;&#x662F;&#x51FA;&#x4E8E;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x81EA;&#x5E26;&#x51FD;&#x6570;&#x7684;&#x9700;&#x8981;&#xFF0C;&#x6BD4;&#x5982;&#x6709;&#x4E9B;&#x51FD;&#x6570;&#x53EA;&#x652F;&#x6301;&#x65F6;&#x95F4;&#xFF0C;&#x6709;&#x4E9B;&#x51FD;&#x6570;&#x53EA;&#x652F;&#x6301;&#x6570;&#x5B57;&#x3002;&#x5F15;&#x5165;&#x989D;&#x5916;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#x4F1A;&#x6781;&#x5927;&#x7684;&#x589E;&#x52A0;&#x7406;&#x89E3;&#x6210;&#x672C;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x503C;&#x5F97;&#x53CD;&#x590D;&#x659F;&#x914C;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
+<p>Tableau &#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#x6709;&#x4E09;&#x79CD;&#xFF1A;</p>
+<ol>
+<li>Dimension &#x548C; Measure</li>
+<li>Discrete &#x548C; Continuous</li>
+<li>&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF1A;string/number/date/time...</li>
+</ol>
+<h2 id="&#x4E09;&#x79CD;&#x6570;&#x636E;&#x6A21;&#x578B;">&#x4E09;&#x79CD;&#x6570;&#x636E;&#x6A21;&#x578B;</h2>
+<h3 id="dimensions-and-measures">Dimensions and Measures</h3>
+<p><a href="https://www.tableau.com/sites/default/files/whitepapers/081027-infovis-showme-vfinal-fix.pdf" target="_blank">https://www.tableau.com/sites/default/files/whitepapers/081027-infovis-showme-vfinal-fix.pdf</a></p>
+<pre><code>By convention in datacubes used in data warehouses, independent variables are called dimensions and dependent variables are called measures. Measures. e.g. Sum(Sales), are typically aggregated before display (and thus calculated) and are hence dependent on the choice of fields used as a dimension. This is an important and novel aspect of Tableau&#x2019;s data model.
+</code></pre><p><a href="https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles.htm" target="_blank">https://help.tableau.com/current/pro/desktop/en-us/datafields_typesandroles.htm</a></p>
+<pre><code>Dimensions contain qualitative values (such as names, dates, or geographical data). You can use dimensions to categorize, segment, and reveal the details in your data. Dimensions affect the level of detail in the view.
+
+Measures contain numeric, quantitative values that you can measure. Measures can be aggregated. When you drag a measure into the view, Tableau applies an aggregation to that measure
+</code></pre><p>&#x4ECE; SQL &#x7684;&#x89D2;&#x5EA6;&#xFF0C; Dimension &#x548C; Measure &#x5F88;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#xFF1A;</p>
+<ul>
+<li>dimension: &#x4F5C;&#x4E3A; group by &#x540E;&#x9762;&#x7684;&#x503C;</li>
+<li>measure: &#x4F5C;&#x4E3A; group by &#x65F6;&#x9700;&#x8981;&#x805A;&#x5408;&#x7684;&#x503C;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x52A0;&#x4E0A; sum/avg &#x7B49;&#x805A;&#x5408;&#x51FD;&#x6570;</li>
+</ul>
+<p>&#x6211;&#x5728;&#x5B98;&#x7F51;&#x627E;&#x5230;&#x4E00;&#x5F20;&#x56FE;&#xFF1A;</p>
+<p><img src="https://si.geilicdn.com/img-4d380000016d728b77be0a211587-unadjust_881_559.png" alt="img"></p>
+<p>&#x5F53;&#x4F60;&#x628A; dimension &#x5B57;&#x6BB5;&#x62D6;&#x5165;&#x4E0A;&#x8FF0;&#x7EA2;&#x8272;&#x6846;&#x4E2D;&#x65F6;&#xFF0C;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x7684;&#x89D2;&#x5EA6;&#x7684;&#x6765;&#x8BF4;&#xFF0C;&#x4F60;&#x5C31;&#x662F;&#x505A;&#x4E86;&#x4E00;&#x6B21; group by, &#x800C;&#x5C06; measure &#x5B57;&#x6BB5;&#x62D6;&#x5165;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x52A0;&#x4E0A;&#x805A;&#x5408;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x6211;&#x7ECF;&#x5E38;&#x5728;&#x60F3;&#xFF0C;&#x867D;&#x7136; Tableau &#x58F0;&#x79F0;&#x4E0D;&#x9700;&#x8981;&#x61C2;&#x6280;&#x672F;&#x4E0D;&#x9700;&#x8981;&#x61C2; SQL &#x4E5F;&#x80FD;&#x4F7F;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x61C2; SQL &#x7684;&#x540C;&#x5B66;&#x771F;&#x7684;&#x80FD;&#x591F;&#x7406;&#x89E3;&#x805A;&#x5408;&#x51FD;&#x6570;&#x548C;LOD&#x7B49;&#x6982;&#x5FF5;&#xFF1F;Google &quot;why tableau&quot;, &#x7B2C;&#x4E8C;&#x4E2A;&#x63D0;&#x793A;&#x5C31;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x805A;&#x5408; measure:</p>
+<p><img src="https://si.geilicdn.com/img-11640000016d813de5920a2166a4-unadjust_1566_334.png" alt="img"></p>
+<h3 id="discrete-and-continuous">Discrete and Continuous</h3>
+<p>Discrete: &#x79BB;&#x6563;&#x6570;&#x636E;&#xFF0C;&#x663E;&#x793A;&#x84DD;&#x8272;
+Continuous: &#x8FDE;&#x7EED;&#x6570;&#x636E;&#xFF0C;&#x663E;&#x793A;&#x7EFF;&#x8272;</p>
+<p>Discrete &#x548C; Continuous &#x7684;&#x5B57;&#x6BB5;&#x5728; Tableau &#x4E2D;&#x884C;&#x4E3A;&#x6709;&#x4EE5;&#x4E0B;&#x533A;&#x522B;&#xFF1A;</p>
+<ul>
+<li>&#x5C06;&#x79BB;&#x6563;&#x5B57;&#x6BB5;&#x62D6;&#x5230; rows/column &#x65F6;&#x663E;&#x793A;&#x6807;&#x9898;&#xFF0C;&#x5C06;&#x8FDE;&#x7EED;&#x5B57;&#x6BB5;&#x62D6;&#x5165; rows/column &#x8868;&#x73B0;&#x4E3A;&#x8FDE;&#x7EED;&#x7684;&#x5750;&#x6807;&#x8F74;</li>
+<li>&#x8FDB;&#x884C;&#x7B5B;&#x9009;&#x65F6;&#xFF0C;&#x79BB;&#x6563;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x9009;&#x62E9;&#xFF0C;&#x8FDE;&#x7EED;&#x6570;&#x636E;&#x9009;&#x62E9;&#x533A;&#x95F4;&#xFF0C;&#x8FD9;&#x4E2A;&#x5F88;&#x65B9;&#x4FBF;</li>
+<li>&#x5C06;&#x5B57;&#x6BB5;&#x6620;&#x5C04;&#x5230;&#x989C;&#x8272;&#x65F6;&#xFF0C;&#x79BB;&#x6563;&#x6570;&#x636E;&#x8868;&#x73B0;&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x989C;&#x8272;&#xFF0C;&#x8FDE;&#x7EED;&#x6570;&#x636E;&#x8868;&#x73B0;&#x4E3A;&#x6E10;&#x53D8;&#x8272;</li>
+<li>&#x4E25;&#x91CD;&#x5F71;&#x54CD;&#x56FE;&#x8868;&#x667A;&#x80FD;&#x63A8;&#x8350;&#xFF0C;&#x6BD4;&#x5982;&#x50CF; Mark &#x7684; shape &#x5C5E;&#x6027;&#xFF0C;&#x56E0;&#x4E3A;&#x5F62;&#x72B6;&#x603B;&#x6570;&#x6709;&#x9650;&#xFF0C;&#x53EA;&#x80FD;&#x6620;&#x5C04;&#x79BB;&#x6563;&#x5B57;&#x6BB5;&#x3002;&#x800C; Size &#x5C5E;&#x6027;&#x57FA;&#x672C;&#x53EA;&#x6620;&#x5C04;&#x8FDE;&#x7EED;&#x5B57;&#x6BB5;.</li>
+</ul>
+<h3 id="data-types">Data Types</h3>
+<p>&#x6570;&#x636E;&#x7684;&#x7C7B;&#x578B;, &#x5728; Tableau &#x5DE6;&#x4FA7; Data &#x680F;&#x5B57;&#x6BB5;&#x540D;&#x524D;&#x9762;&#x6709;&#x5C0F;&#x56FE;&#x6807;&#x6307;&#x793A;&#xFF0C;&#x5927;&#x6982;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>string</li>
+<li>date</li>
+<li>date &amp; time</li>
+<li>number</li>
+<li>boolean</li>
+<li>geographic values</li>
+<li>...</li>
+</ul>
+<p>&#x4EE5;&#x4E0A;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x533A;&#x5206;&#x65B9;&#x4FBF;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x5185;&#x7F6E;&#x51FD;&#x6570;&#x65F6;&#x8FDB;&#x884C;&#x63D0;&#x793A;&#xFF0C;&#x6BD4;&#x5982;&#x67D0;&#x4E9B;&#x51FD;&#x6570;&#x53EA;&#x652F;&#x6301;&#x65F6;&#x95F4;&#xFF0C;&#x4F60;&#x586B;&#x4E2A;&#x6570;&#x5B57;&#x7ED9;&#x4F60;&#x62A5;&#x9519;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="visulazition.html" class="navigation navigation-prev " aria-label="Previous page: 作图方式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="automatic-presentation.html" class="navigation navigation-next " aria-label="Next page: 图表自动推荐">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据模型","level":"1.4","depth":1,"next":{"title":"图表自动推荐","level":"1.5","depth":1,"path":"source/automatic-presentation.md","ref":"source/automatic-presentation.md","articles":[]},"previous":{"title":"作图方式","level":"1.3","depth":1,"path":"source/visulazition.md","ref":"source/visulazition.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"source/data-model.md","mtime":"2019-10-08T08:17:31.700Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-08T08:18:49.519Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

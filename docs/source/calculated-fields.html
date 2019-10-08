@@ -1,0 +1,320 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>计算字段 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="low-sql.html" />
+    
+    
+    <link rel="prev" href="automatic-presentation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic-principle.html">
+            
+                <a href="basic-principle.html">
+            
+                    
+                    基本思想和原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="visulazition.html">
+            
+                <a href="visulazition.html">
+            
+                    
+                    作图方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="data-model.html">
+            
+                <a href="data-model.html">
+            
+                    
+                    数据模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="automatic-presentation.html">
+            
+                <a href="automatic-presentation.html">
+            
+                    
+                    图表自动推荐
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="calculated-fields.html">
+            
+                <a href="calculated-fields.html">
+            
+                    
+                    计算字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="low-sql.html">
+            
+                <a href="low-sql.html">
+            
+                    
+                    减少手写 SQL 的功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >计算字段</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;">&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;</h1>
+<p>&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4E3B;&#x8981;&#x5206;&#x6790; Tableau &#x8BA1;&#x7B97;&#x5B57;&#x6BB5;(Calculated Fields)&#x7684;&#x8BBE;&#x8BA1;&#x3002;</p>
+<h2 id="&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;&#x7684;&#x79CD;&#x7C7B;">&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;&#x7684;&#x79CD;&#x7C7B;</h2>
+<p>Tableau &#x7684;&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;&#x4E3B;&#x8981;&#x5206;&#x4E24;&#x79CD;&#xFF0C;&#x4E00;&#x79CD;&#x662F; Basic Calulations&#xFF0C; &#x6700;&#x540E;&#x90FD;&#x8F6C;&#x6210; SQL &#x6267;&#x884C;&#x4E86;&#x67E5;&#x8BE2;&#xFF0C;&#x53E6;&#x4E00;&#x79CD;&#x662F; Table Calculations&#xFF0C;&#x5728;&#x524D;&#x7AEF;&#x5BF9;&#x5DF2;&#x7ECF;&#x53D6;&#x5F97;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x3002;&#x7B80;&#x5355;&#x7406;&#x89E3;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x662F;&#x540E;&#x7AEF;&#x8BA1;&#x7B97;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;&#x524D;&#x7AEF;&#x8BA1;&#x7B97;&#x3002;&#x53E6;&#x5916; LOD Expressions &#x663E;&#x7136;&#x4E5F;&#x5C5E;&#x4E8E;&#x540E;&#x7AEF;&#x8BA1;&#x7B97;&#x3002;</p>
+<p>&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;&#x7684;&#x5206;&#x7C7B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://si.geilicdn.com/img-3f960000016da9f39d4b0a2166a4-unadjust_188_203.png" alt="img"></p>
+<h3 id="basic-calulation">Basic Calulation</h3>
+<p>&#x672C;&#x8D28;&#x4E0A;&#x6765;&#x8BF4;&#xFF0C;&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x51CF;&#x5C11;&#x624B;&#x5199; SQL&#x3002;&#x6BD4;&#x5982; <code>select sum(fieldA)*10 from tableA group by id</code>, &#x5F88;&#x96BE;&#x5728; UI &#x4E0A;&#x76F4;&#x63A5;&#x63CF;&#x8FF0;&#x4E58;&#x4EE5; 10 &#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;&#x7684;&#x8BDD;&#xFF0C;&#x53EA;&#x80FD;&#x76F4;&#x63A5;&#x5199; SQL &#x4E86;&#x3002;&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x770B;&#x6210;&#x4E00;&#x4E2A; mini &#x7248;&#x7684; SQL&#xFF0C;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#x3002;</p>
+<h3 id="table-caculation">Table Caculation</h3>
+<p>Table Caculation &#x5C5E;&#x4E8E;&#x524D;&#x7AEF;&#x8BA1;&#x7B97;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#x7279;&#x522B;&#x6709;&#x7528;&#x3002;&#x8FD9;&#x91CC;&#x6709;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A; <a href="https://public.tableau.com/en-us/gallery/50-years-chinas-space-journey?tab=featured&amp;topic=all&amp;type=featured" target="_blank">&#x4E2D;&#x56FD;&#x8FD1;50&#x5E74;&#x822A;&#x5929;&#x6280;&#x672F;&#x7684;&#x53D1;&#x5C55;</a>&#x3002;&#x5728;&#x6C42;&#x6BCF;&#x4E2A;&#x70B9;&#x7684; X &#x548C; Y &#x5750;&#x6807;&#x65F6;&#xFF0C;&#x4E25;&#x91CD;&#x4F9D;&#x8D56;&#x4E86; Table Caculation.</p>
+<h3 id="lod-expressions">LOD Expressions</h3>
+<p>LOD Expressions &#x9700;&#x8981;&#x5355;&#x72EC;&#x62CE;&#x51FA;&#x6765;&#x8BF4;&#x4E00;&#x4E0B;&#xFF0C;&#x8FD9;&#x662F;&#x4E2A;&#x975E;&#x5E38;&#x806A;&#x660E;&#x7684;&#x60F3;&#x6CD5;&#xFF0C;&#x6781;&#x5927;&#x7684;&#x7B80;&#x5316;&#x4E86;&#x4E00;&#x7C7B;&#x590D;&#x6742;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>Level of Detail &#x4ECE; SQL &#x7684;&#x89D2;&#x5EA6;&#x5F88;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#xFF0C;&#x5C31;&#x662F; group by &#x7684;&#x4E1C;&#x897F;&#x4E0D;&#x4E00;&#x6837;&#x3002;&#x867D;&#x7136; Tableau &#x5B98;&#x7F51;&#x4E0A;&#x7684;&#x6587;&#x6863;&#x4E00;&#x76F4;&#x907F;&#x514D;&#x51FA;&#x73B0; SQL &#x91CC;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4ECE; SQL &#x7684;&#x89D2;&#x5EA6;&#x6765;&#x7406;&#x89E3; LOD Expressions &#x786E;&#x5B9E;&#x975E;&#x5E38;&#x76F4;&#x89C2;&#x3002;&#x5982;&#x4F55;&#x901A;&#x8FC7; SQL &#x8BED;&#x53E5;&#x5B9E;&#x73B0; LOD &#x91CC;&#x7684; fixed, include, exclude &#xFF1F; &#x6211;&#x5728;&#x7F51;&#x4E0A;&#x627E;&#x5230;<a href="https://community.tableau.com/docs/DOC-18211" target="_blank">&#x4E00;&#x7BC7;&#x975E;&#x5E38;&#x597D;&#x7684;&#x4F8B;&#x5B50;</a>&#xFF0C;&#x5B83;&#x5F88;&#x597D;&#x7684;&#x8BF4;&#x660E;&#x4E86; LOD &#x7684;&#x539F;&#x7406;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="automatic-presentation.html" class="navigation navigation-prev " aria-label="Previous page: 图表自动推荐">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="low-sql.html" class="navigation navigation-next " aria-label="Next page: 减少手写 SQL 的功能">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"计算字段","level":"1.6","depth":1,"next":{"title":"减少手写 SQL 的功能","level":"1.7","depth":1,"path":"source/low-sql.md","ref":"source/low-sql.md","articles":[]},"previous":{"title":"图表自动推荐","level":"1.5","depth":1,"path":"source/automatic-presentation.md","ref":"source/automatic-presentation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"source/calculated-fields.md","mtime":"2019-10-08T08:17:31.699Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-08T08:18:49.519Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
