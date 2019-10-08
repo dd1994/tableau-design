@@ -1,6 +1,6 @@
 # 计算字段
 
-这篇文章主要分析 Tableau 计算字段(Calculated Fields)的设计。
+这篇文章主要分析 Tableau 计算字段(Calculated Fields)的设计。计算字段是一个很优雅的设计，如果没有计算字段很多情况下都只能手写 SQL 了。 
 
 ## 计算字段的种类
 
