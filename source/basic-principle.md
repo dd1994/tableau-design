@@ -1,5 +1,20 @@
 # 基本思想和原则
 
+<!-- TOC -->
+
+- [基本思想和原则](#基本思想和原则)
+  - [Tableau 的起源](#tableau-的起源)
+  - [基本原则](#基本原则)
+    - [1.  Easy Interface](#1--easy-interface)
+    - [2. Data Exploration](#2-data-exploration)
+    - [3. Expressiveness](#3-expressiveness)
+    - [4. Visualization Best Practices](#4-visualization-best-practices)
+    - [5. Database Independence](#5-database-independence)
+  - [核心技术VizQL](#核心技术vizql)
+
+<!-- /TOC -->
+
+
 Tableau 的官网和 [Papers 页面](https://research.tableau.com/papers)提供了很多文章，对理解 Tableau 的设计思想有很大帮助。
 
 这篇文章会分析一下 Tableau 基本思想和原则，虽然看起来可能有点虚，但是这些基本原则保证了 Tableau 这个产品逻辑上的一致性，一旦你理解它的方式，就很容易举一反三，进行自我学习。后续的文章会详细解剖 Tableau 一些核心功能的设计思想，比如作图方式、智能推荐、计算字段等等。
@@ -16,7 +31,7 @@ process.
 这是 Tableau 这个产品思想的基础。举个反例，像 [redash](https://github.com/getredash/redash) 这样的软件，就是严格的把“可视化”和“分析”分离开，在 [redash 官网的视频](https://redash.io) 就可以看到，它的操作方式就是：先写 SQL 取得数据，然后选择图表进行可视化。
 
 
-## 基本原则：
+## 基本原则
 
 ### 1.  Easy Interface
 要保证简单易用的界面，这样才能给普通人使用
@@ -41,7 +56,7 @@ Tableau 要帮助人们可视化的探索数据
 
 数据库无关，让用户不用纠结于语法细节。这是因为 vizQL 编译到 SQL 时抹平了差异。
 
-## VizQL
+## 核心技术VizQL
 
 VizQL 是一种 DSL, Tableau 的核心技术，虽然不是开源的，但是我们从介绍里能看出个大概:
 
@@ -54,6 +69,15 @@ VizQL 主要做了两件事：
 
 第一件事很好理解，为了抹平各种数据库的差异，需要一种中间语言。
 第二件事有很多库做过了，比如[ggplot2](https://ggplot2.tidyverse.org), [Vega](https://vega.github.io/vega/), [G2](https://antv.alipay.com/zh-cn/g2/3.x/index.html)
+
+这两件事都属于那种并不难，但是细节上需要打磨很多年，也需要在很多实际应用场景下检验。
+
+举两个例子：
+
+1. Tableau 支持那几十种数据库，你要一个个去兼容，想想这个维护工作量有多大，如果没有足够多的实际应用场景，可能有 bug 都发现不了。
+2. G2 发布了两年了，在阿里也有各种业务应用场景，但是还有各种 bug，看看 github issue 就知道了
+
+我觉得这是 Tableau 的最大的护城河，毕竟已经在这个领域打磨了10多年了。
 
 从我个人的直观感受来说，一个 DSL 同时做这两件事是一个值得商榷的问题。
 

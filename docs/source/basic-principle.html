@@ -239,6 +239,23 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x57FA;&#x672C;&#x601D;&#x60F3;&#x548C;&#x539F;&#x5219;">&#x57FA;&#x672C;&#x601D;&#x60F3;&#x548C;&#x539F;&#x5219;</h1>
+<!-- TOC -->
+<ul>
+<li><a href="#&#x57FA;&#x672C;&#x601D;&#x60F3;&#x548C;&#x539F;&#x5219;">&#x57FA;&#x672C;&#x601D;&#x60F3;&#x548C;&#x539F;&#x5219;</a><ul>
+<li><a href="#tableau-&#x7684;&#x8D77;&#x6E90;">Tableau &#x7684;&#x8D77;&#x6E90;</a></li>
+<li><a href="#&#x57FA;&#x672C;&#x539F;&#x5219;">&#x57FA;&#x672C;&#x539F;&#x5219;</a><ul>
+<li><a href="#1--easy-interface">1.  Easy Interface</a></li>
+<li><a href="#2-data-exploration">2. Data Exploration</a></li>
+<li><a href="#3-expressiveness">3. Expressiveness</a></li>
+<li><a href="#4-visualization-best-practices">4. Visualization Best Practices</a></li>
+<li><a href="#5-database-independence">5. Database Independence</a></li>
+</ul>
+</li>
+<li><a href="#&#x6838;&#x5FC3;&#x6280;&#x672F;vizql">&#x6838;&#x5FC3;&#x6280;&#x672F;VizQL</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
 <p>Tableau &#x7684;&#x5B98;&#x7F51;&#x548C; <a href="https://research.tableau.com/papers" target="_blank">Papers &#x9875;&#x9762;</a>&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x6587;&#x7AE0;&#xFF0C;&#x5BF9;&#x7406;&#x89E3; Tableau &#x7684;&#x8BBE;&#x8BA1;&#x601D;&#x60F3;&#x6709;&#x5F88;&#x5927;&#x5E2E;&#x52A9;&#x3002;</p>
 <p>&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4F1A;&#x5206;&#x6790;&#x4E00;&#x4E0B; Tableau &#x57FA;&#x672C;&#x601D;&#x60F3;&#x548C;&#x539F;&#x5219;&#xFF0C;&#x867D;&#x7136;&#x770B;&#x8D77;&#x6765;&#x53EF;&#x80FD;&#x6709;&#x70B9;&#x865A;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E9B;&#x57FA;&#x672C;&#x539F;&#x5219;&#x4FDD;&#x8BC1;&#x4E86; Tableau &#x8FD9;&#x4E2A;&#x4EA7;&#x54C1;&#x903B;&#x8F91;&#x4E0A;&#x7684;&#x4E00;&#x81F4;&#x6027;&#xFF0C;&#x4E00;&#x65E6;&#x4F60;&#x7406;&#x89E3;&#x5B83;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5C31;&#x5F88;&#x5BB9;&#x6613;&#x4E3E;&#x4E00;&#x53CD;&#x4E09;&#xFF0C;&#x8FDB;&#x884C;&#x81EA;&#x6211;&#x5B66;&#x4E60;&#x3002;&#x540E;&#x7EED;&#x7684;&#x6587;&#x7AE0;&#x4F1A;&#x8BE6;&#x7EC6;&#x89E3;&#x5256; Tableau &#x4E00;&#x4E9B;&#x6838;&#x5FC3;&#x529F;&#x80FD;&#x7684;&#x8BBE;&#x8BA1;&#x601D;&#x60F3;&#xFF0C;&#x6BD4;&#x5982;&#x4F5C;&#x56FE;&#x65B9;&#x5F0F;&#x3001;&#x667A;&#x80FD;&#x63A8;&#x8350;&#x3001;&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;&#x7B49;&#x7B49;&#x3002;</p>
 <h2 id="tableau-&#x7684;&#x8D77;&#x6E90;">Tableau &#x7684;&#x8D77;&#x6E90;</h2>
@@ -250,7 +267,7 @@ must be synergistically integrated into a visual analysis
 process. </p>
 </blockquote>
 <p>&#x8FD9;&#x662F; Tableau &#x8FD9;&#x4E2A;&#x4EA7;&#x54C1;&#x601D;&#x60F3;&#x7684;&#x57FA;&#x7840;&#x3002;&#x4E3E;&#x4E2A;&#x53CD;&#x4F8B;&#xFF0C;&#x50CF; <a href="https://github.com/getredash/redash" target="_blank">redash</a> &#x8FD9;&#x6837;&#x7684;&#x8F6F;&#x4EF6;&#xFF0C;&#x5C31;&#x662F;&#x4E25;&#x683C;&#x7684;&#x628A;&#x201C;&#x53EF;&#x89C6;&#x5316;&#x201D;&#x548C;&#x201C;&#x5206;&#x6790;&#x201D;&#x5206;&#x79BB;&#x5F00;&#xFF0C;&#x5728; <a href="https://redash.io" target="_blank">redash &#x5B98;&#x7F51;&#x7684;&#x89C6;&#x9891;</a> &#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5B83;&#x7684;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#xFF1A;&#x5148;&#x5199; SQL &#x53D6;&#x5F97;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9;&#x56FE;&#x8868;&#x8FDB;&#x884C;&#x53EF;&#x89C6;&#x5316;&#x3002;</p>
-<h2 id="&#x57FA;&#x672C;&#x539F;&#x5219;&#xFF1A;">&#x57FA;&#x672C;&#x539F;&#x5219;&#xFF1A;</h2>
+<h2 id="&#x57FA;&#x672C;&#x539F;&#x5219;">&#x57FA;&#x672C;&#x539F;&#x5219;</h2>
 <h3 id="1--easy-interface">1.  Easy Interface</h3>
 <p>&#x8981;&#x4FDD;&#x8BC1;&#x7B80;&#x5355;&#x6613;&#x7528;&#x7684;&#x754C;&#x9762;&#xFF0C;&#x8FD9;&#x6837;&#x624D;&#x80FD;&#x7ED9;&#x666E;&#x901A;&#x4EBA;&#x4F7F;&#x7528;</p>
 <h3 id="2-data-exploration">2. Data Exploration</h3>
@@ -267,7 +284,7 @@ process. </p>
 <p>&#x9075;&#x5FAA;&#x53EF;&#x89C6;&#x5316;&#x7684;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</p>
 <h3 id="5-database-independence">5. Database Independence</h3>
 <p>&#x6570;&#x636E;&#x5E93;&#x65E0;&#x5173;&#xFF0C;&#x8BA9;&#x7528;&#x6237;&#x4E0D;&#x7528;&#x7EA0;&#x7ED3;&#x4E8E;&#x8BED;&#x6CD5;&#x7EC6;&#x8282;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A; vizQL &#x7F16;&#x8BD1;&#x5230; SQL &#x65F6;&#x62B9;&#x5E73;&#x4E86;&#x5DEE;&#x5F02;&#x3002;</p>
-<h2 id="vizql">VizQL</h2>
+<h2 id="&#x6838;&#x5FC3;&#x6280;&#x672F;vizql">&#x6838;&#x5FC3;&#x6280;&#x672F;VizQL</h2>
 <p>VizQL &#x662F;&#x4E00;&#x79CD; DSL, Tableau &#x7684;&#x6838;&#x5FC3;&#x6280;&#x672F;&#xFF0C;&#x867D;&#x7136;&#x4E0D;&#x662F;&#x5F00;&#x6E90;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x4ECE;&#x4ECB;&#x7ECD;&#x91CC;&#x80FD;&#x770B;&#x51FA;&#x4E2A;&#x5927;&#x6982;:</p>
 <blockquote>
 <p>like SQL and MDX, VizQLTM contains a WHERE clause for filters, an ORDER BY clause for sorting, a GROUP BY clause for controlling level of detail and aggregation, etc. VizQL is unique in that it contains a rich syntax for creating the row and column structure of a table. VizQL also lets you select different types of marks (text, symbols, lines, etc.) and control their visual attributes (color, size, etc.). VizQL has the capabilities needed to create all the common types of visualizations necessary for analysis and reporting applications. Tableau&#x2019;s VizQL technology is unique within the industry.</p>
@@ -279,6 +296,13 @@ process. </p>
 </ol>
 <p>&#x7B2C;&#x4E00;&#x4EF6;&#x4E8B;&#x5F88;&#x597D;&#x7406;&#x89E3;&#xFF0C;&#x4E3A;&#x4E86;&#x62B9;&#x5E73;&#x5404;&#x79CD;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x9700;&#x8981;&#x4E00;&#x79CD;&#x4E2D;&#x95F4;&#x8BED;&#x8A00;&#x3002;
 &#x7B2C;&#x4E8C;&#x4EF6;&#x4E8B;&#x6709;&#x5F88;&#x591A;&#x5E93;&#x505A;&#x8FC7;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;<a href="https://ggplot2.tidyverse.org" target="_blank">ggplot2</a>, <a href="https://vega.github.io/vega/" target="_blank">Vega</a>, <a href="https://antv.alipay.com/zh-cn/g2/3.x/index.html" target="_blank">G2</a></p>
+<p>&#x8FD9;&#x4E24;&#x4EF6;&#x4E8B;&#x90FD;&#x5C5E;&#x4E8E;&#x90A3;&#x79CD;&#x5E76;&#x4E0D;&#x96BE;&#xFF0C;&#x4F46;&#x662F;&#x7EC6;&#x8282;&#x4E0A;&#x9700;&#x8981;&#x6253;&#x78E8;&#x5F88;&#x591A;&#x5E74;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x5728;&#x5F88;&#x591A;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x573A;&#x666F;&#x4E0B;&#x68C0;&#x9A8C;&#x3002;</p>
+<p>&#x4E3E;&#x4E24;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<ol>
+<li>Tableau &#x652F;&#x6301;&#x90A3;&#x51E0;&#x5341;&#x79CD;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4F60;&#x8981;&#x4E00;&#x4E2A;&#x4E2A;&#x53BB;&#x517C;&#x5BB9;&#xFF0C;&#x60F3;&#x60F3;&#x8FD9;&#x4E2A;&#x7EF4;&#x62A4;&#x5DE5;&#x4F5C;&#x91CF;&#x6709;&#x591A;&#x5927;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8DB3;&#x591F;&#x591A;&#x7684;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x53EF;&#x80FD;&#x6709; bug &#x90FD;&#x53D1;&#x73B0;&#x4E0D;&#x4E86;&#x3002;</li>
+<li>G2 &#x53D1;&#x5E03;&#x4E86;&#x4E24;&#x5E74;&#x4E86;&#xFF0C;&#x5728;&#x963F;&#x91CC;&#x4E5F;&#x6709;&#x5404;&#x79CD;&#x4E1A;&#x52A1;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x6709;&#x5404;&#x79CD; bug&#xFF0C;&#x770B;&#x770B; github issue &#x5C31;&#x77E5;&#x9053;&#x4E86;</li>
+</ol>
+<p>&#x6211;&#x89C9;&#x5F97;&#x8FD9;&#x662F; Tableau &#x7684;&#x6700;&#x5927;&#x7684;&#x62A4;&#x57CE;&#x6CB3;&#xFF0C;&#x6BD5;&#x7ADF;&#x5DF2;&#x7ECF;&#x5728;&#x8FD9;&#x4E2A;&#x9886;&#x57DF;&#x6253;&#x78E8;&#x4E86;10&#x591A;&#x5E74;&#x4E86;&#x3002;</p>
 <p>&#x4ECE;&#x6211;&#x4E2A;&#x4EBA;&#x7684;&#x76F4;&#x89C2;&#x611F;&#x53D7;&#x6765;&#x8BF4;&#xFF0C;&#x4E00;&#x4E2A; DSL &#x540C;&#x65F6;&#x505A;&#x8FD9;&#x4E24;&#x4EF6;&#x4E8B;&#x662F;&#x4E00;&#x4E2A;&#x503C;&#x5F97;&#x5546;&#x69B7;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
 
                                 
@@ -323,7 +347,7 @@ process. </p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"基本思想和原则","level":"1.2","depth":1,"next":{"title":"作图方式","level":"1.3","depth":1,"path":"source/visulazition.md","ref":"source/visulazition.md","articles":[]},"previous":{"title":"开始","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"source/basic-principle.md","mtime":"2019-10-09T11:15:13.045Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-09T11:17:52.408Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"基本思想和原则","level":"1.2","depth":1,"next":{"title":"作图方式","level":"1.3","depth":1,"path":"source/visulazition.md","ref":"source/visulazition.md","articles":[]},"previous":{"title":"开始","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"source/basic-principle.md","mtime":"2019-10-09T14:12:35.880Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-09T14:15:12.063Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

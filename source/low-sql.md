@@ -1,5 +1,14 @@
 # 减少手写 SQL 的功能
 
+<!-- TOC -->
+
+- [减少手写 SQL 的功能](#减少手写-sql-的功能)
+    - [Aliases](#aliases)
+    - [Group](#group)
+    - [Bins](#bins)
+
+<!-- /TOC -->
+
 Tableau 有很多小功能，都是为了避免用户手写 SQL，降低使用门槛，方便不懂 SQL 的用户使用，同时会用 SQL 的同学也会觉得这些功能非常方便。这些功能都是精心设计过的，有很多使用场景，也是 Tableau 的优势之一，因为我发现很多同类软件用着用着就必须要写 SQL 才能解决了(比如 Metabase)...
 
 ### Aliases

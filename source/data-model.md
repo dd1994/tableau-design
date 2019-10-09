@@ -1,5 +1,15 @@
 # 数据模型
 
+<!-- TOC -->
+
+- [数据模型](#数据模型)
+  - [三种数据模型](#三种数据模型)
+    - [Dimensions and Measures](#dimensions-and-measures)
+    - [Discrete and Continuous](#discrete-and-continuous)
+    - [Data Types](#data-types)
+
+<!-- /TOC -->
+
 很多可视化软件只有一种数据模型，即区分`string/number/date/time...`等数据类型， 这大多是出于使用数据库自带函数的需要，比如有些函数只支持时间，有些函数只支持数字。引入额外的数据模型会极大的增加理解成本，是一个值得反复斟酌的事情。
 
 Tableau 的数据模型有三种：
