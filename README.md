@@ -1,4 +1,4 @@
-# Tableau 的产品设计分析
+# Tableau 的产品设计理念分析
 
 因为最近在做一个和 Tableau 同类的产品，所以对 Tableau 做了一些了解。这些文章是我对 Tableau 产品设计方面思考的一个集合，有任何问题欢迎联系 <jiang-di@outlook.com>。
 
