@@ -1,6 +1,6 @@
 # 计算字段
 
-这篇文章主要分析 Tableau 计算字段(Calculated Fields)的设计。计算字段是一个很优雅的方案，很多可视化软件虽然也有计算字段这个功能，但是 Tableau 的计算字段功能特别强大，支持非常多的函数，而且 Table Caculation 和  LOD Expressions 是杀手级的功能，非常方便。
+计算字段是一个很优雅的方案，很多可视化软件虽然也有计算字段这个功能，但是 Tableau 的计算字段功能特别强大，支持非常多的函数，而且 Table Caculation 和  LOD Expressions 是杀手级的功能，非常方便。
 
 ## 计算字段的种类
 
