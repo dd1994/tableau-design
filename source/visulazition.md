@@ -1,6 +1,6 @@
 # 作图方式
 
-这篇文章的主要分析 Tableau 是如何作图的以及为什么要这么设计。
+这里讲的作图方式是指作出图表的交互方式，在很多可视化软件中，要先通过操作得到数据，然后在一个列表中选出你想要的图表类型(选图表这个过程可能有自动选择)。
 
 去 [Tableau Gallery](https://public.tableau.com/en-us/gallery/?tab=viz-of-the-day&type=viz-of-the-day) 看看, 多翻几页，就可以直观体会到 Tableau 相比同类软件的强大，它能做到的可视化效果令人惊叹，甚至可以做出很多图表库（如 G2 和 ggplot2）都做不出来的图。
 
