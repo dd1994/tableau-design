@@ -7,5 +7,4 @@
 * [图表自动推荐](/source/automatic-presentation.md)
 * [计算字段](/source/calculated-fields.md)
 * [减少手写 SQL 的功能](/source/low-sql.md)
-* [数据预处理](/source/data-prep.md)
 * [Dashboard](/source/dashboard.md)
