@@ -13,7 +13,7 @@
 
 ![img](https://si.geilicdn.com/img-546e0000016db00439090a211580-unadjust_1171_893.png)
 
-你可以下载下来用Tableau 打开，会发现它只有三个 worksheet，两个简单的数字图，以及一个点图，其它的都是富文本和图片:
+看起来非常炫酷，你可以下载下来用Tableau 打开，会发现它只有三个 worksheet，两个简单的数字图，以及一个点图，其它的都是富文本和图片:
 
 ![img](https://si.geilicdn.com/img-4dd70000016db002a9090a2166a4-unadjust_850_792.png)
 
