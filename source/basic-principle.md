@@ -2,7 +2,7 @@
 
 Tableau 的官网和 [Papers 页面](https://research.tableau.com/papers)提供了很多文章，对理解 Tableau 的设计思想有很大帮助。
 
-这篇文章会分析一下 Tableau 基本思想和原则，后续的文章会详细解剖 Tableau 一些核心功能的设计思想，比如作图方式、智能推荐、计算字段等等。
+这篇文章会分析一下 Tableau 基本思想和原则，看起来可能有点虚。后续的文章会详细解剖 Tableau 一些核心功能的设计思想，比如作图方式、智能推荐、计算字段等等。
 
 ## Tableau 的起源
 
