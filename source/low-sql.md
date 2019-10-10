@@ -6,6 +6,7 @@
     - [Aliases](#aliases)
     - [Group](#group)
     - [Bins](#bins)
+    - [Hierarchy](#hierarchy)
 
 <!-- /TOC -->
 
@@ -21,6 +22,16 @@ Tableau 有很多小功能，都是为了避免用户手写 SQL，降低使用�
 
 ### Bins
 Bins 跟上面的 Group 很像，也是对字段值进行分组，不过是针对连续的数据。比如你想看销量区间在 0-10, 10-20, 20-30 的商品分别有多少，就可以用 Bins.如果没有这个功能，只能写比较复杂的 SQL 了
+
+### Hierarchy
+
+Hierarchy 方便的解决了一类常见的问题。举个例子，现在有一个商品表，把地区信息相关的字段创建一个Hierarchy：
+
+![img](https://si.geilicdn.com/img-0bb20000016db3821c230a211580-unadjust_406_206.png)
+
+如果你要看商品在不同地区的销售情况,简单的点击加号和减号，就能够改变你要比较的详细级别。
+
+
 
 其它待补充...
 
