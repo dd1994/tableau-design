@@ -11,6 +11,7 @@
 去 [Tableau Gallery](https://public.tableau.com/en-us/gallery/?tab=viz-of-the-day&type=viz-of-the-day) 看看, 多翻几页，就可以直观体会到 Tableau 相比同类软件的强大，它可以做出同类软件不可能做出的图，甚至可以做出很多图表库（如 G2 和 ggplot2）都做不出来的图。这跟它基于图形语法的作图方式密切相关。
 
 我们可以这样定量的分析不同软件的可视化能力：
+
 1. 能够做出图表种类的数量；能否做出某个特定图表
 2. 做出同样的图表，需要的操作次数。包括点击次数，拖动次数(drag and drop)，文本输入次数。
 
